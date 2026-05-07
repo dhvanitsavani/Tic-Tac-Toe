@@ -24,8 +24,8 @@ body {
   padding: 16px;
 }
 
-.logo h1 {
-  font-size: clamp(22px, 5vw, 34px);
+.logo img{
+  height: 50px;
 }
 
 /* GAME AREA */
@@ -54,6 +54,8 @@ body {
   background: #4a90e2;
 
   font-size: clamp(14px, 3vw, 18px);
+
+  display: none;
 }
 
 /* BOARD */
@@ -111,6 +113,12 @@ body {
 
   font-size: clamp(14px, 3vw, 16px);
   cursor: pointer;
+
+  transition: all 0.1s ease;
+}
+
+.restart:active{
+  transform: scale(0.95);
 }
 
 /* FOOTER */
@@ -129,11 +137,25 @@ body {
   .board {
     width: min(60vw, 360px);
   }
+
+  .logo img{
+    height: 60px;
+  }
 }
 
 /* DESKTOP */
 @media (min-width: 1000px) {
   .board {
     width: 360px;
+  }
+
+  .logo img{
+    height: 70px;
+  }
+}
+
+@media (min-width: 1400px){
+  .logo img{
+    height: 80px;
   }
 }

@@ -41,7 +41,7 @@ function aiMove() {
   endCheck();
 }
 
-/* MINIMAX (IMPROVED WITH DEPTH) */
+/* MINIMAX */
 function minimax(newBoard, player, depth) {
 
   if (check(newBoard, HUMAN)) return { score: depth - 10 };
@@ -118,6 +118,7 @@ function endCheck() {
 /* END */
 function end(msg, color) {
   gameActive = false;
+  statusDiv.style.display = "inline-block";
   statusDiv.textContent = msg;
   statusDiv.style.background = color;
 }
@@ -128,6 +129,5 @@ restartBtn.onclick = () => {
   gameActive = true;
 
   cells.forEach(c => c.setAttribute("data-value", ""));
-  statusDiv.textContent = "Your Turn";
-  statusDiv.style.background = "#4a90e2";
+  statusDiv.style.display = "none";
 };
