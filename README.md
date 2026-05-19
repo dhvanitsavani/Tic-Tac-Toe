@@ -1,8 +1,5 @@
-Tic Tac Toe Game
+# Tic Tac Toe Game
 
-
-Strong Opponent - Computer
-
+### Strong Opponent - Computer
 Computer is trainned how to win and stop opponent from winning.
-
 Live : https://tic-tac-toe-ds9.netlify.app
